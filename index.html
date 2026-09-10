@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Kill the Red</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <section id="loginScreen" class="screen">
+      <div class="panel">
+        <h1>KILL THE RED</h1>
+        <p class="subtitle">2D Forest Shooter</p>
+        <form id="loginForm">
+          <input id="username" type="text" maxlength="16" placeholder="Username" required autocomplete="username">
+          <input id="password" type="password" placeholder="Password" required autocomplete="current-password">
+          <button class="primary" type="submit">LOGIN & PLAY</button>
+        </form>
+        <p id="loginMsg" class="msg"></p>
+        <div class="leaderboard-box">
+          <h2>🏆 Leaderboard</h2>
+          <div id="leaderboardLogin">Memuat...</div>
+        </div>
+        <p class="small">Password dipakai untuk sesi lokal game. Untuk akun online sungguhan, gunakan autentikasi server.</p>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen hidden">
+      <canvas id="gameCanvas"></canvas>
+      <div id="hud">
+        <div><b>KILL THE RED</b></div>
+        <div>LV <span id="level">1</span> · <span id="weapon">PISTOL</span></div>
+        <div class="hp-wrap"><span id="hpText">100 / 100</span><div class="hp-bar"><i id="hpBar"></i></div></div>
+        <div>Kills: <span id="kills">0</span> · Score: <span id="score">0</span></div>
+      </div>
+      <button id="cheatOpen" class="cheat-btn">CHEAT</button>
+      <div id="cheatPanel" class="panel mini hidden">
+        <button id="cheatClose" class="x">×</button>
+        <h2>Cheat Code</h2>
+        <input id="cheatCode" type="text" placeholder="Enter code">
+        <button id="cheatSubmit" class="primary">ACTIVATE</button>
+        <p id="cheatMsg" class="msg"></p>
+      </div>
+      <div id="touchControls">
+        <div id="joystick"><div id="stick"></div></div>
+        <button id="fireBtn">●<span>FIRE</span></button>
+      </div>
+      <div id="gameOver" class="overlay hidden">
+        <div class="panel">
+          <h2>GAME OVER</h2>
+          <p>Level: <b id="finalLevel">1</b></p>
+          <p>Score: <b id="finalScore">0</b></p>
+          <button id="retryBtn" class="primary">RETRY</button>
+          <button id="menuBtn">MAIN MENU</button>
+        </div>
+      </div>
+      <div id="winScreen" class="overlay hidden">
+        <div class="panel">
+          <h2>YOU CLEARED LEVEL 30!</h2>
+          <p>Score: <b id="winScore">0</b></p>
+          <button id="winMenuBtn" class="primary">SAVE & MAIN MENU</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
