@@ -1,7 +1,7 @@
 const CONFIG = {
   // Paste your deployed Google Apps Script Web App URL here.
   // Example: https://script.google.com/macros/s/XXXX/exec
-  SHEETS_URL: "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE"
+  SHEETS_URL: "https://script.google.com/macros/s/AKfycbwE4dI1_QreSoTW-HC2TP45RbCe7BcVLHVmLPOEtw1hTHyCsOvGWxAqmlwPCoQY7r7Q/exec "
 };
 
 const $ = id => document.getElementById(id);
